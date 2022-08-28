@@ -1,0 +1,58 @@
+<nav class="navbar navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Dashboard</a>
+  </div>
+</nav>
+
+<ul class="nav nav-pills mb-3 m-4" id="pills-tab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button
+      class="nav-link"
+      [ngClass]="activeTab === 0 ? 'active' : ''"
+      (click)="activeTab = 0"
+      id="pills-home-tab"
+      data-bs-toggle="pill"
+      data-bs-target="#pills-home"
+      type="button"
+      role="tab"
+      aria-controls="pills-home"
+      aria-selected="true"
+    >
+      Dashboard
+    </button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button
+      class="nav-link"
+      [ngClass]="activeTab === 1 ? 'active' : ''"
+      (click)="activeTab = 1"
+      id="pills-profile-tab"
+      data-bs-toggle="pill"
+      data-bs-target="#pills-profile"
+      type="button"
+      role="tab"
+      aria-controls="pills-profile"
+      aria-selected="false"
+    >
+      Designation
+    </button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button
+      class="nav-link"
+      [ngClass]="activeTab === 2 ? 'active' : ''"
+      (click)="activeTab = 2"
+      id="pills-contact-tab"
+      data-bs-toggle="pill"
+      data-bs-target="#pills-contact"
+      type="button"
+      role="tab"
+      aria-controls="pills-contact"
+      aria-selected="false"
+    >
+      Management
+    </button>
+  </li>
+</ul>
+<app-designation-table *ngIf="activeTab === 1"></app-designation-table>
+<app-management-table *ngIf="activeTab === 2"></app-management-table>

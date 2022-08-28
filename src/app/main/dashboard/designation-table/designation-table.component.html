@@ -1,0 +1,39 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">S.No</th>
+      <th scope="col">Designation Name</th>
+      <th scope="col">Role Name</th>
+      <th scope="col">Department Name</th>
+      <th scope="col">Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let designation of designations">
+      <th scope="row">{{ designation.S_No }}</th>
+      <td>{{ designation.DesignationName }}</td>
+      <td>{{ designation.RoleName }}</td>
+      <td>{{ designation.DepartmentName }}</td>
+      <button
+        type="button"
+        class="btn btn-primary"
+        (click)="deleteDesignation(designation.id)"
+        style="
+          --bs-btn-padding-y: 0.25rem;
+          --bs-btn-padding-x: 0.5rem;
+          --bs-btn-font-size: 0.75rem;
+          background-color: blueviolet !important;
+        "
+      >
+        Delete
+      </button>
+    </tr>
+  </tbody>
+</table>
+
+<div class="d-flex w-100 align-items-center">
+  <div class="flex-1 w-100"></div>
+  <button type="button" class="btn btn-primary btn-sm">Add Designation</button>
+</div>
+
+<app-add-designation-modal></app-add-designation-modal>

@@ -1,0 +1,32 @@
+{
+  "designation": [
+    {
+      "id": 1,
+      "S_No": 1,
+      "DesignationName": "Nikil",
+      "RoleName": "Software Developer",
+      "DepartmentName": "Engineering"
+    },
+    {
+      "id": 2,
+      "S_No": 2,
+      "DesignationName": "Nikil",
+      "RoleName": "Software Developer",
+      "DepartmentName": "Engineering"
+    },
+    {
+      "id": 3,
+      "S_No": 3,
+      "DesignationName": "Nikil",
+      "RoleName": "Software Developer",
+      "DepartmentName": "Engineering"
+    }
+  ],
+  "management": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ]
+}
